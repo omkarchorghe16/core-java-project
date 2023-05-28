@@ -1,0 +1,11 @@
+3
+5 21 1 21 3 3
+accdeeccdeeaab
+2
+2 3 4
+baba
+7
+3 5 4 6
+abcbacbabcc
+15
+123
