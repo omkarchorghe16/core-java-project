@@ -9,7 +9,7 @@ public class SuperConstructor {
 		this.age=age;
 	}
 	SuperConstructor(int age,String name,String address){
-		this.age=0;
+		this.age=age;
 		this.name=name;
 		this.address=address;
 	}

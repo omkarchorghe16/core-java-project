@@ -9,39 +9,13 @@ public class MyStringDemo implements Cloneable{
 		System.out.println("j"+"a"+"v"+"a"); 
 
 		MyStringDemo my=new MyStringDemo();
-		//my.stringManipulation(my);
+		my.stringManipulation(my);
 		
-		my.stringStringBufferStringBuilder();
+		
 		
 	}
 
-	private void stringStringBufferStringBuilder() {
-		// TODO Auto-generated method stub
-		System.out.println("inside stringStringBufferStringBuilder");
-		System.out.println("****************String*******************");
-		String s1=new String("omkar");
-		System.out.println(s1+" # "+s1.hashCode());
-		
-		String s2=new String("omkar");
-		System.out.println(s2+" # "+s2.hashCode());
-		
-		System.out.println("****************StringBuffer*******************");
-		
-		StringBuffer s3=new StringBuffer("omkar");
-		StringBuffer s4=new StringBuffer("omkar");
-		s3.append(s4);
-		System.out.println(s3+" # "+s3.hashCode());
-		System.out.println(s4+" # "+s4.hashCode());
-		
-		System.out.println("****************StringBuilder*******************");
-		
-		StringBuilder s5=new StringBuilder("omkar");
-		StringBuilder s6=new StringBuilder("omkar");
-		s5.append(s6);
-		System.out.println(s5+" # "+s5.hashCode());
-		System.out.println(s6+" # "+s6.hashCode());
-	}
-
+	
 	private void stringManipulation(MyStringDemo my) throws CloneNotSupportedException {
 		// TODO Auto-generated method stub
 		String s1="abc";
