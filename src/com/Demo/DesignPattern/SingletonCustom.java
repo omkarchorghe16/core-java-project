@@ -7,7 +7,10 @@ public class SingletonCustom {
 	private static String PAN;
 	private static String Name;
 	private static Address A;
+	
+	private SingletonCustom(){
 		
+	}
 	private static SingletonCustom singleton;
 	//private static Singleton singleton=new Singleton("xyz", "akshay");
 	
@@ -36,6 +39,7 @@ public class SingletonCustom {
 		SingletonCustom s1=singleton.getInstance();
 		System.out.println(s1.hashCode());
 		
+		//need to check below
 		SingletonCustom s3=new SingletonCustom();
 		System.out.println(s3.hashCode());
 		SingletonCustom s4=new SingletonCustom();
