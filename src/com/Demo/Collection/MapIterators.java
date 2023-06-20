@@ -10,8 +10,8 @@ public class MapIterators {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Employee e1=new Employee(1,"Omkar");
-		Map<Employee,Boolean> map=new HashMap<>();
+		EmployeeEqualsHashcode e1=new EmployeeEqualsHashcode(1,"Omkar");
+		Map<EmployeeEqualsHashcode,Boolean> map=new HashMap<>();
 		map.put(e1,true);
 		System.out.println(map.get(e1));
 		System.out.println(map);

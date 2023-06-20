@@ -30,7 +30,6 @@ public class CollectionProgram {
 	}
 
 	private static void getUniqueObjectTimeStampWithHashMap(List<Entity> entityListValues) {
-		// TODO Auto-generated method stub
 		int len=entityListValues.size();
 		HashMap map=new HashMap();
 		for(int i=0;i<len;i++) {

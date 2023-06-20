@@ -18,7 +18,6 @@ public class ArrayVSArrayList {
 	private static Map<String, String> portIdNameMap=new HashMap<String, String> ();
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		 //It will give number format Exception at runtime
 		 //Integer i = new Integer(null);
@@ -72,14 +71,14 @@ public class ArrayVSArrayList {
 		System.out.println(l.size());
 		System.out.println(l);
 		
-		List<Employee> eList =new ArrayList<Employee>();
-		eList.add(new Employee(1, "omkar"));
-		eList.add(new Employee(2, "niraj"));
-		eList.add(new Employee(3, "swapnil"));
-		eList.add(new Employee(4, "amol"));
+		List<EmployeeEqualsHashcode> eList =new ArrayList<EmployeeEqualsHashcode>();
+		eList.add(new EmployeeEqualsHashcode(1, "omkar"));
+		eList.add(new EmployeeEqualsHashcode(2, "niraj"));
+		eList.add(new EmployeeEqualsHashcode(3, "swapnil"));
+		eList.add(new EmployeeEqualsHashcode(4, "amol"));
 		Iterator itr1=eList.iterator();
 		while(itr1.hasNext()){
-		Employee e=(Employee) itr1.next();
+		EmployeeEqualsHashcode e=(EmployeeEqualsHashcode) itr1.next();
 		if(e.getEmpName().equals("omkar"))
 		System.out.println("Employee found : "+e.getEmpName()); 
 		}

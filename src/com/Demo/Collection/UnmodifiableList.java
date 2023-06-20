@@ -10,7 +10,6 @@ import java.util.List;
 public class UnmodifiableList {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		List<Integer> arr=new ArrayList<Integer>();
 		arr.add(1);

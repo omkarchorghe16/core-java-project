@@ -1,12 +1,11 @@
 package com.Demo.Collection;
 
-public class Employee {
+public class EmployeeEqualsHashcode {
 
 	int empId;
 	String empName;
 	
-	public Employee(int i, String string) {
-		// TODO Auto-generated constructor stub
+	public EmployeeEqualsHashcode(int i, String string) {
 		//super();
 				this.empId = i;
 				this.empName = string;
@@ -41,7 +40,7 @@ public class Employee {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Employee other = (Employee) obj;
+		EmployeeEqualsHashcode other = (EmployeeEqualsHashcode) obj;
 		if (empId != other.empId)
 			return false;
 		if (empName == null) {

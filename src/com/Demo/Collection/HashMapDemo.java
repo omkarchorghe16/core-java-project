@@ -10,7 +10,6 @@ import java.util.Set;
 public class HashMapDemo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		System.out.println("____Student HashMap with JVM equals & hashcode__________________________________________");
         Map<Student,Integer> student=new HashMap<Student,Integer>();
@@ -36,11 +35,11 @@ public class HashMapDemo {
         }
         
         System.out.println("____Employee HashMap with own equals & hashcode__________________________________________");
-        Map<Employee,Integer> employee=new HashMap<Employee,Integer>();
-        Employee e1=new Employee(1, "omkar");
-        Employee e2=new Employee(1, "omkar");
-        Employee e3=new Employee(3, "swapnil");
-        Employee e4=new Employee(4, "amol");
+        Map<EmployeeEqualsHashcode,Integer> employee=new HashMap<EmployeeEqualsHashcode,Integer>();
+        EmployeeEqualsHashcode e1=new EmployeeEqualsHashcode(1, "omkar");
+        EmployeeEqualsHashcode e2=new EmployeeEqualsHashcode(1, "omkar");
+        EmployeeEqualsHashcode e3=new EmployeeEqualsHashcode(3, "swapnil");
+        EmployeeEqualsHashcode e4=new EmployeeEqualsHashcode(4, "amol");
         employee.put(e1,1);
         employee.put(e2,2);
         employee.put(e3,3);
@@ -51,9 +50,9 @@ public class HashMapDemo {
         System.out.println(e1.hashCode());
         System.out.println(e2.hashCode());
 
-        System.out.println("getting values : "+employee.get(new Employee(1, "omkar")));
+        System.out.println("getting values : "+employee.get(new EmployeeEqualsHashcode(1, "omkar")));
         
-        for (Entry<Employee, Integer> entry : employee.entrySet()) {  
+        for (Entry<EmployeeEqualsHashcode, Integer> entry : employee.entrySet()) {  
             System.out.println("Key = " + entry.getKey() +", Value = " + entry.getValue()); 
         
           //getting java.util.ConcurrentModificationException

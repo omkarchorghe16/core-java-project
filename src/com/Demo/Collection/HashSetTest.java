@@ -66,11 +66,11 @@ public class HashSetTest {
 			}
 	        
 	        System.out.println("___Employee HAshset with own equals & hashcode___________________________________________");
-	        Set<Employee> employee=new HashSet<Employee>();
-	        Employee e1=new Employee(1, "omkar");
-	        Employee e2=new Employee(2, "omkar");
-	        Employee e3=new Employee(3, "swapnil");
-	        Employee e4=new Employee(4, "amol");
+	        Set<EmployeeEqualsHashcode> employee=new HashSet<EmployeeEqualsHashcode>();
+	        EmployeeEqualsHashcode e1=new EmployeeEqualsHashcode(1, "omkar");
+	        EmployeeEqualsHashcode e2=new EmployeeEqualsHashcode(2, "omkar");
+	        EmployeeEqualsHashcode e3=new EmployeeEqualsHashcode(3, "swapnil");
+	        EmployeeEqualsHashcode e4=new EmployeeEqualsHashcode(4, "amol");
 	        employee.add(e1);
 	        employee.add(e2);
 	        employee.add(e3);
@@ -83,11 +83,11 @@ public class HashSetTest {
 	        employee.remove(e2);
 	        Iterator itr=employee.iterator();
 	        while(itr.hasNext()) {
-	        	Employee e=(Employee) itr.next();
+	        	EmployeeEqualsHashcode e=(EmployeeEqualsHashcode) itr.next();
 	        	System.out.println(e);
 	        }
 	        System.out.println("contains ="+employee.contains(e2));
-	        for (Employee employee2 : employee) {
+	        for (EmployeeEqualsHashcode employee2 : employee) {
 				System.out.println("foreach="+employee2.toString());
 			}
 	        
