@@ -17,4 +17,8 @@ public interface InterfaceDemo {
 	public static void interfaceDemoMethod2() {
 		System.out.println("inside interfaceDemoMethod 2");
 	}
+	
+	public default void interfaceDemoMethod3() {
+		System.out.println("inside interfaceDemoMethod 3");
+	}
 }

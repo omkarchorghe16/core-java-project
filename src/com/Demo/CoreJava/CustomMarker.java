@@ -8,51 +8,33 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.io.Serializable;
 
-public class CustomMarker implements Serializable,Cloneable,Runnable,CustomMarketInterface{
+public class CustomMarker implements Serializable,Cloneable,CustomMarketInterface{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1688159640647835043L;
+	
 	public Object clone() {
 		System.out.println("own clonning ");
 		return new Object();
 	}
 	public void clone1() {
-		System.out.println("own clonning ");
+		System.out.println("own clonning 1 ");
 	}
 	public static void main(String[] args) throws Exception {
-		// TODO Auto-generated method stub
 
 		CustomMarker c=new CustomMarker();
 		System.out.println(c);
 		
-		
-		
 		 if((c instanceof CustomMarketInterface)){
-             System.out.println("successfull");
+             System.out.println("successful");
          }
          else {
              throw new Exception("Must implement interface Marker ");
          }     
 		
 	}
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub
-		System.out.println("inside run method");
-		
-	}
-	@Override
-	public Object call() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public void dosomthing(int a, double d) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public int m(String s) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 
 }
