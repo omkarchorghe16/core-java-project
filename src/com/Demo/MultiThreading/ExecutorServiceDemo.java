@@ -8,7 +8,6 @@ import java.util.concurrent.TimeUnit;
 public class ExecutorServiceDemo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		//1.Fixed thread pool
 		System.out.println("1.Fixed thread pool----------------------------------");
@@ -16,7 +15,7 @@ public class ExecutorServiceDemo {
 		System.out.println(coreCount);
 		ExecutorService service=Executors.newFixedThreadPool(coreCount);
 		//submit tasks
-				for(int i=0;i<100;i++) {
+				for(int i=0;i<10;i++) {
 					service.execute(new RunnableDemo());
 				}
 				
@@ -30,7 +29,7 @@ public class ExecutorServiceDemo {
 		System.out.println("2.Cahched thread pool--------------------------------");
 		ExecutorService cachedService=Executors.newCachedThreadPool();
 		//submit tasks
-				for(int i=0;i<100;i++) {
+				for(int i=0;i<10;i++) {
 					cachedService.execute(new RunnableDemo());
 				}
 				
@@ -50,7 +49,7 @@ public class ExecutorServiceDemo {
 		System.out.println("4.single threaded executor-----------------------");
 		ExecutorService singleService=Executors.newSingleThreadExecutor();
 		//submit tasks
-		for(int i=0;i<100;i++) {
+		for(int i=0;i<10;i++) {
 			singleService.execute(new RunnableDemo());
 		}
 		

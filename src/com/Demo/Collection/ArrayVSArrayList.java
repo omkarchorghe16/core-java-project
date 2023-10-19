@@ -27,12 +27,12 @@ public class ArrayVSArrayList {
 	     
 		System.out.println("**********Array**********************");
 		int array[]= {1,2,3,4,5,6,7,8,9,0};
-		String arrayString[]= {"one","two","three","four","five"};
 		int array1[]= new int[10];
 		array1[0]=9;
 		System.out.println(array.length);
 		System.out.println(array1.length);
 		
+		String arrayString[]= {"one","two","three","four","five"};
 		List<String>list1=Arrays.asList("application/json","application/xml");
 		List<String>list2=Arrays.asList(arrayString);
 		System.out.println(list1);
