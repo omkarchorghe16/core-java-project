@@ -8,7 +8,6 @@ import java.util.stream.Stream;
 public class MapVsFlatMap {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		//find length of each word
 		List<String> list=Arrays.asList("omkar chorghe","swapnil","amol","Akshay","niraj");

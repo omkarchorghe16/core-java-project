@@ -7,7 +7,6 @@ import java.util.Spliterator;
 public class IteratorVSplitIterator {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		List<String> list=Arrays.asList("omkar","swapnil","amol","Akshay","niraj");
 		Spliterator<String> s1=list.spliterator();
@@ -15,7 +14,7 @@ public class IteratorVSplitIterator {
 		
 		
 		s1.forEachRemaining(System.out::println);
-		System.out.println("&&&&&&&&&&&&&&&&&&&&&&&");
+		System.out.println("--------------------------");
 		s2.forEachRemaining(System.out::println);
 		
 	}

@@ -3,7 +3,6 @@ package com.Demo.Java8;
 public class FInterfaceClient implements FInterface{
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		FInterfaceClient fi=new FInterfaceClient();
 		//functional inteface method (need obj instance )
 		fi.method();
@@ -18,7 +17,6 @@ public class FInterfaceClient implements FInterface{
 
 	@Override
 	public void method() {
-		// TODO Auto-generated method stub
 		System.out.println("inside FInterfaceClient method");
 	}
 

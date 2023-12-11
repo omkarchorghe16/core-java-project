@@ -11,11 +11,11 @@ public interface FInterface {
 	 
 	 //other multiple methods can be default/static
 	public static void method1() {
-		System.out.println("inside method1");
+		System.out.println("inside static method1");
 	}
 	
 	public default void method3() {
-		System.out.println("indside method3");
+		System.out.println("indside default method3");
 	}
 	
 	 //can't have obj method inside java interface
