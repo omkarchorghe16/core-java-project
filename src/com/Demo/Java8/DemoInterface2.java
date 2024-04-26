@@ -1,6 +1,8 @@
 package com.Demo.Java8;
 
-//Normal interface
+//Normal interface without @FunctionalInterface allowed 2+ abstract methods
+//@FunctionalInterface allows only 1 abstract method
+//@FunctionalInterface
 public interface DemoInterface2 {
 
 	//Normal interface can have 2 abstract methods

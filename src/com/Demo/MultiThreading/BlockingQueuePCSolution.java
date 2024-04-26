@@ -3,6 +3,7 @@ package com.Demo.MultiThreading;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
+//Producer consumer problem Solution
 public class BlockingQueuePCSolution { 
 	 
 	   public static void main(String[] args) { 
