@@ -4,39 +4,23 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.Set;
 import java.util.function.BinaryOperator;
+import java.util.function.Function;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public strictfp class Java8Programs {
 
 	public static void main(String[] args) {
-		double avg;
-		int rating = 13;
-		int gmailCount = 3;
-		double avg1 = rating / gmailCount;
-		Double dd = (double) (rating / gmailCount);
-		System.out.println("avg1=" +avg1);
-		System.out.println("dd=" +dd);
-		System.out.println("---------------------------------");
-		double tmpX = (new Integer(rating)).doubleValue();
-		double tmpY = (new Integer(gmailCount)).doubleValue();
 
-		
-		Double d2 = Double.valueOf(tmpX / tmpY);
-		Double d = tmpX / tmpY;
-		// double ddd = dd.doubleValue();
-		System.out.println("d2=" + d2);
-		System.out.println("d=" + d);
-
-		System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-		
-		
 		List<String> names1 = new ArrayList<String>();
 		names1.add("Mahesh ");
 		names1.add("Suresh ");
@@ -61,26 +45,7 @@ public strictfp class Java8Programs {
 		tester.sortUsingJava8(names2);
 		System.out.println(names2);
 
-		List<Integer> lnums = new ArrayList();
-		lnums = Arrays.asList(2, 15, 6, 9, 16);
-
-		List<Integer> lnumbers = new ArrayList();
-		Integer arr[] = { 11, 2, 13, 4, 5, 16, 7, 8, 91, 10 };
-		lnumbers = Arrays.asList(arr);
-
-		Collections.sort(lnums, (s1, s2) -> s1.compareTo(s2));
-		System.out.println("Sorted array = "+lnums);
-
-		System.out.println("Sort using Java 8 syntax ASC ");
-		List<Integer> sortedList = lnumbers.stream().sorted().collect(Collectors.toList());
-		System.out.println("sortedList array = "+sortedList);
-		sortedList.forEach(System.out::print);
 		System.out.println("-------------------------------------------------");
-		System.out.println("Sort using Java 8 syntax DESC ");
-		List<Integer> sortedListRev = lnums.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
-		sortedListRev.forEach(System.out::println);
-		System.out.println("-------------------------------------------------");
-		
 		List<Employee> employeeList = new ArrayList<Employee>();
 		employeeList = getAllEmployee(employeeList);
 
@@ -88,8 +53,7 @@ public strictfp class Java8Programs {
 				.collect(Collectors.toList());
 		empList.forEach(System.out::println);
 		System.out.println("-------------------------------------------------");
-		
-		
+
 		List<Employee> empListDesc = employeeList.stream().sorted(Comparator.comparingInt(Employee::getId).reversed())
 				.collect(Collectors.toList());
 		empListDesc.forEach(System.out::println);
@@ -99,7 +63,7 @@ public strictfp class Java8Programs {
 		Map<String, Long> noOfMaleAndFemaleEmployees = employeeList.stream()
 				.collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
 
-		System.out.println("Number Of MaleAndFemaleEmployees = "+noOfMaleAndFemaleEmployees);
+		System.out.println("Number Of MaleAndFemaleEmployees = " + noOfMaleAndFemaleEmployees);
 		System.out.println("***********************************************");
 		// distinct deparment list
 		employeeList.stream().map(Employee::getDepartment).distinct().forEach(System.out::println);
@@ -108,7 +72,7 @@ public strictfp class Java8Programs {
 		Map<String, Double> avgAgeOfMaleAndFemaleEmployees = employeeList.stream()
 				.collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingInt(Employee::getAge)));
 
-		System.out.println("avg Age Of MaleAndFemaleEmployees = "+avgAgeOfMaleAndFemaleEmployees);
+		System.out.println("avg Age Of MaleAndFemaleEmployees = " + avgAgeOfMaleAndFemaleEmployees);
 
 		System.out.println("***********************************************");
 
@@ -117,9 +81,8 @@ public strictfp class Java8Programs {
 
 		Employee highestPaidEmployee = highestPaidEmployeeWrapper.get();
 
-		System.out.println("Details Of Highest Paid Employee : "+highestPaidEmployee);
+		System.out.println("Details Of Highest Paid Employee : " + highestPaidEmployee);
 
-		
 		System.out.println("***********************************************");
 
 		employeeList.stream().filter(e -> e.getYearOfJoining() > 2015).map(Employee::getName)
@@ -136,8 +99,6 @@ public strictfp class Java8Programs {
 			System.out.println(entry.getKey() + " : " + entry.getValue());
 		}
 
-		
-		
 		System.out.println("***********************************************");
 
 		Optional<Employee> maxSalaryEmp = employeeList.stream()
