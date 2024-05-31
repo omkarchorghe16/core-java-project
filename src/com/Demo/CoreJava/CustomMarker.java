@@ -10,9 +10,6 @@ import java.io.Serializable;
 
 public class CustomMarker implements Serializable,Cloneable,CustomMarketInterface{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1688159640647835043L;
 	
 	public Object clone() {
@@ -25,7 +22,8 @@ public class CustomMarker implements Serializable,Cloneable,CustomMarketInterfac
 	public static void main(String[] args) throws Exception {
 
 		CustomMarker c=new CustomMarker();
-		System.out.println(c);
+		System.out.println("CustomMarker c="+c);
+		System.out.println("CustomMarker clone="+c.clone());
 		
 		 if((c instanceof CustomMarketInterface)){
              System.out.println("successful");

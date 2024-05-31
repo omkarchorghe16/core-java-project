@@ -16,18 +16,25 @@ public class UnmodifiableList {
 		arr.add(2);
 		arr.add(3);
 		arr.add(4);
-		System.out.println("after 1 ="+arr);
+		System.out.println("before romove ="+arr);
 		arr.remove(1);
-		System.out.println("after 2 ="+arr);
+		System.out.println("after remove ="+arr);
 		
 		
 		System.out.println(arr.get(0));
 		arr.add(0, 15);
 		System.out.println("after 3 ="+arr);
-		List<Integer> l=Collections.unmodifiableList(arr);
-		l.remove(1);
-		System.out.println("after 4 ="+arr);
-		System.out.println("after 4 ="+l);
+		
+		List<Integer> l = new ArrayList<Integer>();
+		try {
+			//Now you can not modify l list ,It will throw Exception
+			l = Collections.unmodifiableList(arr);
+			l.remove(1);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("after arr ="+arr);
+		System.out.println("after l ="+l);
 	}
 
 }

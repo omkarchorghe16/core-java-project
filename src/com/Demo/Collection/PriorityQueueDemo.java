@@ -15,7 +15,7 @@ public class PriorityQueueDemo {
 		//p.remove();
 		//p.poll();
 		p.peek();
-		System.out.println(p);
+		System.out.println("PriorityQueue = "+p);
 		
 	}
 

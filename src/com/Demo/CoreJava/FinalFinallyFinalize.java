@@ -4,10 +4,9 @@ public class FinalFinallyFinalize {
 
 	final int a=10;
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
 		
 		try {
+			// a=20;  It will give compile time error
 			FinalFinallyFinalize f=new FinalFinallyFinalize();
 			f=null;
 			int b;

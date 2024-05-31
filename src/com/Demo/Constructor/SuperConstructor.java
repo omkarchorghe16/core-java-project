@@ -19,11 +19,14 @@ public class SuperConstructor {
 		// TODO Auto-generated constructor stub
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println("inside super main");
-		SuperConstructor s=new SuperConstructor(1, "aa", "bb");
+		SuperConstructor s=new SuperConstructor(30, "Omkar", "834 washinton ave");
 		System.out.println(s);
 
+	}
+	@Override
+	public String toString() {
+		return "SuperConstructor [age=" + age + ", name=" + name + ", address=" + address + "]";
 	}
 
 }
