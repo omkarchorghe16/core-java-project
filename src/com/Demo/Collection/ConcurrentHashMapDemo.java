@@ -19,11 +19,12 @@ public class ConcurrentHashMapDemo {
         employee.put(e2,2);
         employee.put(e3,3);
         employee.put(e4,4);
-        System.out.println(employee.size());
-        System.out.println(e1.equals(e2));
-        System.out.println((e1==e2));
-        System.out.println(e1.hashCode());
-        System.out.println(e2.hashCode());
+        System.out.println("size="+employee.size());
+        System.out.println("e1.equals(e2)="+e1.equals(e2));
+        System.out.println("e1==e2="+(e1==e2));
+        System.out.println("e1.hashCode()="+e1.hashCode());
+        System.out.println("e2.hashCode()="+e2.hashCode());
+
 
         System.out.println("getting values : "+employee.get(new EmployeeEqualsHashcode(1, "omkar")));
         
@@ -32,10 +33,10 @@ public class ConcurrentHashMapDemo {
         
           //getting java.util.ConcurrentModificationException
             if(entry.getKey().equals(e2)) 
-            	employee.put( new EmployeeEqualsHashcode(2, "akshay"),2);
+            	employee.put( new EmployeeEqualsHashcode(2, "Ravi"),7);
             
         }
-        
+        employee.forEach((K,V) -> System.out.println(K + ", Value : " + V));
 	}
 
 }

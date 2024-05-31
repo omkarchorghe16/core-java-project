@@ -4,7 +4,9 @@ public class EmployeeEqualsHashcode {
 
 	int empId;
 	String empName;
-	
+	public EmployeeEqualsHashcode() {
+		
+	}
 	public EmployeeEqualsHashcode(int i, String string) {
 		//super();
 				this.empId = i;

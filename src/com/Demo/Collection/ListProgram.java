@@ -11,7 +11,10 @@ public class ListProgram {
 		Student s1=new Student(1, "omkar");
 		Student s2=new Student(1, "omkar");
 		Student s3=new Student(1, "omkar");
-		
+		System.out.println("s1.hashCode()=" + s1.hashCode());
+		System.out.println("s2.hashCode()=" + s2.hashCode());
+		System.out.println("s3.hashCode()=" + s3.hashCode());
+
 		System.out.println("-------------List-------------------------------------");
 		List<Student> list=new ArrayList<Student>();
 		list.add(s1);list.add(s2);list.add(s3);

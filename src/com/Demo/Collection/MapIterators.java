@@ -9,7 +9,6 @@ import java.util.Map.Entry;
 public class MapIterators {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		EmployeeEqualsHashcode e1=new EmployeeEqualsHashcode(1,"Omkar");
 		Map<EmployeeEqualsHashcode,Boolean> map=new HashMap<>();
 		map.put(e1,true);
