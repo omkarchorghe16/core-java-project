@@ -22,7 +22,7 @@ public class StreamProgram {
 		
 		//Sorting of list using java8
 		Stream<Integer> sorted = numbers.stream().filter(x->x%2==0).sorted();
-		System.out.println("sorted :"+sorted);
+		System.out.println("sorted mumbers are :");
 		sorted.forEach(System.out::println);
 	}
 }

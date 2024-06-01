@@ -1,6 +1,8 @@
 package com.Demo.Java8.funcInterface;
 
-public class Employee {
+import java.util.Comparator;
+
+public class Employee{
 	private int empId;
 	private String empName;
 	private String designation;
@@ -52,6 +54,9 @@ public class Employee {
 	public String toString() {
 		return "Employee [empId=" + empId + ", empName=" + empName + ", designation=" + designation + "]";
 	}
+
+
+
 	
 	
 }

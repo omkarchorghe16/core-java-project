@@ -9,7 +9,6 @@ public class Employee {
 	private int deptNo;
 
 	public Employee() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public Employee(int empno, String ename, String job, double salary,
