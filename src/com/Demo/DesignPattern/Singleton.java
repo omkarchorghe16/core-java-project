@@ -2,6 +2,7 @@ package com.Demo.DesignPattern;
 
 import java.text.DateFormat;
 
+//Example of singleton classes is Runtime class,DateFormat, Action Servlet, and Service Locator.
 public class Singleton{
 
 	//Lazy initilization
@@ -10,9 +11,7 @@ public class Singleton{
 	//Eager initilization
 	//private static Singleton obj = new Singleton();
 	
-	String str;
 	private Singleton() {
-		str = "it is an example of singleton class.";   
 	}
 	
 	public static Singleton getInstance() {
@@ -26,20 +25,17 @@ public class Singleton{
 	{
 		System.out.println("Hello Singleton");
 		Singleton s=Singleton.getInstance();
-		System.out.println(s.hashCode());
-		
 		Singleton s1=Singleton.getInstance();
-		System.out.println(s1.hashCode());
 		
-		System.out.println(s +"-same instance-"+s1);
+		System.out.println(s.hashCode() +"-same instance-"+s1.hashCode());
 		
 		System.out.println("Real Singleton classes--------------------------------");
 		Runtime rt=Runtime.getRuntime();
 		Runtime rt1=Runtime.getRuntime();  
-		System.out.println(rt +"-same instance-"+rt1);
+		System.out.println(rt.hashCode() +"-same instance-"+rt1.hashCode());
 		
 		DateFormat df=DateFormat.getInstance();
 		DateFormat df1=DateFormat.getInstance();
-		System.out.println(df +"-same instance-"+df1);
+		System.out.println(df.hashCode() +"-same instance-"+df1.hashCode());
 	}
 }

@@ -1,4 +1,4 @@
-package com.Demo.FruitJuiceProgram;
+package com.Demo.InterviewProgram;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,21 +8,20 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-import com.Demo.FruitJuiceProgram.FileReading;
 
-public class MainApp {
+public class FruitJuiceProgram {
 	public static void main(String[] args)
     {
 		FileReading file = new FileReading();
-		MainApp mainApp = new MainApp();
+		FruitJuiceProgram fruitJuiceProgram = new FruitJuiceProgram();
 		
 		List<String> list = file.readFunction();
 		
 		int caloriIntake = Integer.parseInt(list.get(3));
 		System.out.println("CaloriValue : "+caloriIntake);
 		
-		Map<Character, Integer> outputMap =  mainApp.uniqueList(list.get(1), list.get(2));
-		mainApp.finalCalculation(outputMap, caloriIntake);
+		Map<Character, Integer> outputMap =  fruitJuiceProgram.uniqueList(list.get(1), list.get(2));
+		fruitJuiceProgram.finalCalculation(outputMap, caloriIntake);
 		
 		
     }

@@ -2,10 +2,11 @@ package com.Demo.CoreJava;
 
 import java.io.Serializable;
 
-//Java code for serialization and deserialization  
-//of a Java object 
+//Java code for serialization and deserialization of a Java object 
 public class EmpSerializable implements Serializable {
+	
 	private static final long serialversionUID = 129348938L;
+	
 	transient int a;
 	static int b;
 	String name;

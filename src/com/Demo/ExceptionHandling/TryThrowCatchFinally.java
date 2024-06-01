@@ -1,11 +1,8 @@
 package com.Demo.ExceptionHandling;
 
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
-
 public class TryThrowCatchFinally {
 
 	public static void main(String[] args) throws ArithmeticException, Exception {
-		// TODO Auto-generated method stub
 		
 		TryThrowCatchFinally t=new TryThrowCatchFinally();
 		
@@ -13,7 +10,6 @@ public class TryThrowCatchFinally {
 	}
 
 	private static void tryThrowCatchFinallyTest() throws Exception,ArithmeticException {
-		// TODO Auto-generated method stub
 		
 		try {
 			String error="Error occured";
@@ -26,10 +22,9 @@ public class TryThrowCatchFinally {
 				
 			}
 			
-			//System.out.println("line2");
+			//System.out.println("line2"); //unreachable code bcoz of throw
 			
 		} catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 			System.out.println("line3");
 		}finally {

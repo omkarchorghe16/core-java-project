@@ -1,4 +1,4 @@
-package com.Demo.FruitJuiceProgram;
+package com.Demo.InterviewProgram;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -12,7 +12,7 @@ public class FileReading {
 	public List<String> readFunction(){
 		
 		List<String> list = new ArrayList<String>();
-		try (BufferedReader br = new BufferedReader(new FileReader("sampleinput.txt"))) {
+		try (BufferedReader br = new BufferedReader(new FileReader("resources/sampleinput.txt"))) {
 		    String line;
 			while ((line = br.readLine()) != null) {
 			    	list.add(line);

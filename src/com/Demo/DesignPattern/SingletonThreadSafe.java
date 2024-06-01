@@ -22,11 +22,7 @@ public class SingletonThreadSafe {
 		SingletonThreadSafe s1=SingletonThreadSafe.getInstance();
 		System.out.println(s1.hashCode());
 		
-		//need to check this
-		SingletonThreadSafe s3=new SingletonThreadSafe();
-		System.out.println(s3.hashCode());
-		SingletonThreadSafe s4=new SingletonThreadSafe();
-		System.out.println(s4.hashCode());
+		
 		
 	}
 

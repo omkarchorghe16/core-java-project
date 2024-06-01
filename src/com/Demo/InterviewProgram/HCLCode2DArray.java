@@ -1,4 +1,4 @@
-package com.Demo.Program;
+package com.Demo.InterviewProgram;
 
 import java.lang.reflect.Array;
 import java.util.HashSet;

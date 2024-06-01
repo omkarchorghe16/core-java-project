@@ -8,6 +8,7 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.io.Serializable;
 
+//No method inside marker interface
 public class CustomMarker implements Serializable,Cloneable,CustomMarketInterface{
 
 	private static final long serialVersionUID = 1688159640647835043L;

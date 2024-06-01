@@ -39,7 +39,7 @@ public class SingletonCustom {
 		SingletonCustom s1=singleton.getInstance();
 		System.out.println(s1.hashCode());
 		
-		//need to check below
+		//outside this class we cannot call contructor bcoz it is private
 		SingletonCustom s3=new SingletonCustom();
 		System.out.println(s3.hashCode());
 		SingletonCustom s4=new SingletonCustom();

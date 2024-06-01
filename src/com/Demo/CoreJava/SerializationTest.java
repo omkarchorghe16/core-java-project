@@ -9,10 +9,9 @@ import java.io.ObjectOutputStream;
 public class SerializationTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		SerializableDemo object = new SerializableDemo(1, "geeksforgeeks"); 
-	        String filename = "file.ser"; 
+	        String filename = "resources/file.ser"; 
 	          
 	        // Serialization  
 	        try
@@ -20,7 +19,6 @@ public class SerializationTest {
 	            //Saving of object in a file 
 	            FileOutputStream file = new FileOutputStream(filename); 
 	            ObjectOutputStream out = new ObjectOutputStream(file); 
-	              
 	            // Method for serialization of object 
 	            out.writeObject(object); 
 	              
