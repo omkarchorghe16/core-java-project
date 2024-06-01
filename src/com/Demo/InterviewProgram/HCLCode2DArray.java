@@ -21,7 +21,7 @@ public class HCLCode2DArray {
 				set.add(arr[i][j]);
 			}
 		}
-		System.out.println(set);
+		System.out.println("Set ="+set);
 		System.out.println("-------------------------------------------------------");
 		int mat[][] = { {10, 20, 30, 40, 50, 60, 70, 80, 90},
                 {15, 25, 35, 45},

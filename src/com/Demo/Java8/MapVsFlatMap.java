@@ -13,9 +13,8 @@ public class MapVsFlatMap {
 		//find length of each word
 		List<String> list=Arrays.asList("omkar chorghe","swapnil","amol","Akshay","niraj");
 		List<Integer> wordLength=list.stream().map(String::length).collect(Collectors.toList());
-		System.out.println(wordLength);
-		wordLength.forEach(System.out::print);
-		System.out.println();
+		System.out.println("wordLength ="+wordLength);
+		System.out.println("-------------------------------------------------");
 		mapDemo();
 		flatMapDemo();
 	}

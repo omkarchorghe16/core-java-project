@@ -24,12 +24,12 @@ public class ListNumbersPrograms {
 		lnumbers = Arrays.asList(arr);
 
 		Collections.sort(lnums, (s1, s2) -> s1.compareTo(s2));
-		System.out.println("Sorted array = " + lnums);
+		System.out.println("Sorted array lnums = " + lnums);
 
 		System.out.println("Sort using Java 8 syntax ASC ");
 		List<Integer> sortedList = lnumbers.stream().sorted().collect(Collectors.toList());
-		System.out.println("sortedList array = " + sortedList);
-		sortedList.forEach(System.out::print);
+		System.out.println("sortedList array lnumbers ASC = " + sortedList);
+		//sortedList.forEach(System.out::print);
 
 		System.out.println("-------------------------------------------------");
 		System.out.println("finding duplicate using Java 8 ");
@@ -41,7 +41,8 @@ public class ListNumbersPrograms {
 		System.out.println("-------------------------------------------------");
 		System.out.println("Sort using Java 8 syntax DESC ");
 		List<Integer> sortedListRev = lnums.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
-		sortedListRev.forEach(System.out::println);
+		System.out.println("sortedList array lnums DESC = " + sortedListRev);
+		//sortedListRev.forEach(System.out::println);
 		System.out.println("-------------------------------------------------");
 
 		System.out.println("finding duplicate count of words in string using Java 8 ");

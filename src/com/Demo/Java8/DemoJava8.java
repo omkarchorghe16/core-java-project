@@ -13,7 +13,7 @@ public class DemoJava8 implements DemoInterface1, DemoInterface2 {
 		d.methodAbs2();
 
 		// After Java8 interface
-		carryOutWork(() -> System.out.println(("Do work in lambda exp impl")));
+		d.carryOutWork(() -> System.out.println(("Do work in lambda exp impl")));
 
 	}
 
@@ -24,7 +24,7 @@ public class DemoJava8 implements DemoInterface1, DemoInterface2 {
 		DemoInterface2.super.method();
 	}
 
-	public static void carryOutWork(FInterface sfi) {
+	public void carryOutWork(FInterface sfi) {
 		sfi.method();
 	}
 
