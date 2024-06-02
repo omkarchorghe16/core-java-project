@@ -12,18 +12,20 @@ import java.util.concurrent.TimeUnit;
 public class CallableDemo implements Callable{
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
-		// TODO Auto-generated method stub
 
+		//Runtime.getRuntime().availableProcessors()
+		
 		ExecutorService services = Executors.newSingleThreadExecutor();
+		
 	      Future<?> future = services.submit(new CallableDemo());
-	      future.isDone();
-	      future.isCancelled();
 	      
-	      System.out.println("In Future Object = " + future.get());
+	      System.out.println("In Future isDone = " + future.isDone());
+	      System.out.println("In Future isCancelled = " + future.isCancelled());
+	      System.out.println("In Future get = " + future.get());
 	      future.cancel(false);
 	      
-	      
-	      ExecutorService executor =  Executors.newFixedThreadPool(2);
+	      int processors = Runtime.getRuntime().availableProcessors();
+	      ExecutorService executor =  Executors.newFixedThreadPool(processors);
 	      
 	        List<Future<Integer>> resultList = new ArrayList<>();
 	 
@@ -57,7 +59,6 @@ public class CallableDemo implements Callable{
 
 	@Override
 	public Object call() throws Exception {
-		// TODO Auto-generated method stub
 		 System.out.println("In call");
 	      String name = "test";
 	      return name;

@@ -1,5 +1,7 @@
 package com.Demo.MultiThreading;
 
+//Deadlock program
+//T1 locks T2 and T2 locks T1
 public class DeadLockTest {
 	public static Object Lock1 = new Object();
 	public static Object Lock2 = new Object();
