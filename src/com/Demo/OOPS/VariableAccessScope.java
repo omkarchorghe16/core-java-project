@@ -8,15 +8,14 @@ public class VariableAccessScope {
 		
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int a=20;
-		System.out.println(a);
+		System.out.println("a="+a);
 		VariableAccessScope v=new VariableAccessScope();
 		v.method1();
 	}
 	private void method1() {
-		// TODO Auto-generated method stub
 		System.out.println(this.a);
+		System.out.println(a);
 	}
 
 	

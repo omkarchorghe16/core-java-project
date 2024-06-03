@@ -5,10 +5,11 @@ import com.sun.media.jfxmedia.events.MarkerListener;
 //abstract classes are fast
 public abstract class AbstractDemo implements InterfaceDemo{
 
+	//Instance variable allowed
 	int instanceVar=0;
 	
 	//Constructor
-	AbstractDemo() throws ClassNotFoundException{
+	public AbstractDemo() throws ClassNotFoundException{
 		System.out.println("inside constructor AbstractDemo");
 	}
 	
@@ -21,12 +22,11 @@ public abstract class AbstractDemo implements InterfaceDemo{
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println("inside AbstractDemo");
 		
-		//AbstractDemo abs=new AbstractDemo(); obj creation now allowed for abstract class
+		//AbstractDemo abs=new AbstractDemo(); //obj creation now allowed for abstract class
 		abstractMethod();
-		
+
 		InterfaceDemo.interfaceDemoMethod();
 		
 		InterfaceDemo.interfaceDemoMethod2();
