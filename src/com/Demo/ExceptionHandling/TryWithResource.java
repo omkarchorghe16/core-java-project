@@ -7,6 +7,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class TryWithResource {
@@ -28,6 +30,9 @@ public class TryWithResource {
 		}
 
 		System.out.println("============================================== :");
+		//The resource type List does not implement java.lang.AutoCloseable
+		//try (List list = new ArrayList<>()) {
+		//}
 		
 		try (PrintWriter writer = new PrintWriter(new File("resources/test.txt"))) {
 		    writer.println("Hello World");

@@ -3,7 +3,6 @@ package com.Demo.String;
 public class MyStringDemo implements Cloneable{
 
 	public static void main(String[] args) throws CloneNotSupportedException {
-		// TODO Auto-generated method stub
 		
 		System.out.println('j' + 'a' + 'v' + 'a');
 		System.out.println("j"+"a"+"v"+"a"); 
@@ -17,7 +16,6 @@ public class MyStringDemo implements Cloneable{
 
 	
 	private void stringManipulation(MyStringDemo my) throws CloneNotSupportedException {
-		// TODO Auto-generated method stub
 		String s1="abc";
 		//Stored in String contant pool 
 		// if it present in String pool then it will not create else it create string literal
@@ -50,12 +48,10 @@ public class MyStringDemo implements Cloneable{
 	}
 
 	public  void method(int a) {
-		// TODO Auto-generated method stub
 		System.out.println("int "+a);		
 	}
 
 	public void method(Integer a) {
-		// TODO Auto-generated method stub
 		System.out.println("Integer " + a);
 	}
 	
