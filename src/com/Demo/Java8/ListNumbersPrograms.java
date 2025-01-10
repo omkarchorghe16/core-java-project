@@ -29,7 +29,7 @@ public class ListNumbersPrograms {
 		System.out.println("Sort using Java 8 syntax ASC ");
 		List<Integer> sortedList = lnumbers.stream().sorted().collect(Collectors.toList());
 		System.out.println("sortedList array lnumbers ASC = " + sortedList);
-		//sortedList.forEach(System.out::print);
+		// sortedList.forEach(System.out::print);
 
 		System.out.println("-------------------------------------------------");
 		System.out.println("finding duplicate using Java 8 ");
@@ -42,9 +42,32 @@ public class ListNumbersPrograms {
 		System.out.println("Sort using Java 8 syntax DESC ");
 		List<Integer> sortedListRev = lnums.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
 		System.out.println("sortedList array lnums DESC = " + sortedListRev);
-		//sortedListRev.forEach(System.out::println);
+		// sortedListRev.forEach(System.out::println);
 		System.out.println("-------------------------------------------------");
 
+		System.out.println("Sort Employee list using Java 8 ASC");
+		List<Employee> employees = new ArrayList<Employee>();
+		employees.add(new Employee(10, "Ramesh", 30, 400000));
+		employees.add(new Employee(20, "John", 29, 350000));
+		employees.add(new Employee(30, "Tom", 30, 450000));
+		employees.add(new Employee(40, "Pramod", 29, 500000));
+
+		List<Employee> employeesSortedList1 = employees.stream()
+				.sorted((o1, o2) -> (int) (o1.getSalary() - o2.getSalary())).collect(Collectors.toList());
+		System.out.println(employeesSortedList1);
+
+		List<Employee> employeesSortedList2 = employees.stream().sorted(Comparator.comparingDouble(Employee::getSalary))
+				.collect(Collectors.toList()); // ascending order
+		System.out.println(employeesSortedList2);
+		
+		System.out.println("Sort Employee list using Java 8 DESC");
+		
+		List<Employee> employeesSortedList3 = employees.stream()
+				.sorted(Comparator.comparingDouble(Employee::getSalary).reversed()).collect(Collectors.toList()); // ascending
+																													// order
+		System.out.println(employeesSortedList3);
+
+		System.out.println("-------------------------------------------------");
 		System.out.println("finding duplicate count of words in string using Java 8 ");
 		String str = "my name is omkar my fullname is omkar rajaram chorghe";
 		List<String> stmt = Arrays.asList(str.split(" "));
@@ -61,20 +84,20 @@ public class ListNumbersPrograms {
 
 	}
 
-	//Java 8 prime number code
+	// Java 8 prime number code
 	private static boolean isprime(Integer number) {
 		return number > 1 && IntStream.range(2, number).noneMatch(n -> number % n == 0);
 	}
-	
-	//Legacy prime number code
+
+	// Legacy prime number code
 	private static boolean isprimeOld(Integer number) {
 		boolean isDivisible = false;
-		for(int i=2;i<number;i++) {
-			if(number%i == 0) {
-				isDivisible=true;
+		for (int i = 2; i < number; i++) {
+			if (number % i == 0) {
+				isDivisible = true;
 				return true;
-				
-			}else {
+
+			} else {
 				return false;
 			}
 		}
